@@ -1,259 +1,428 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>News for Teenagers</title>
+<title>TeenNews | News That Makes You Think</title>
+
+<meta name="description"
+content="Interesting news, ideas and discoveries selected for curious teenagers.">
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  margin: 0;
-  padding: 20px;
-  color: #222;
+
+:root {
+  --navy: #14243a;
+  --blue: #315f91;
+  --accent: #e8a943;
+  --background: #f4f6f9;
+  --card: #ffffff;
+  --text: #263449;
+  --muted: #718096;
+  --border: #e5eaf0;
 }
 
-.container {
-  max-width: 800px;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.header {
+  background: var(--navy);
+  color: white;
+  padding: 18px 24px;
+}
+
+.header-inner {
+  max-width: 1120px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.tagline {
+  font-size: 12px;
+  color: #c6d2e1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.header-label {
+  font-size: 12px;
+  color: #d6dfeb;
+}
+
+.hero {
+  background: linear-gradient(120deg, #14243a, #284d73);
+  color: white;
+  padding: 55px 24px 60px;
+}
+
+.hero-inner {
+  max-width: 1120px;
   margin: auto;
 }
 
-h1 {
-  margin-bottom: 5px;
+.hero-label {
+  color: #f3c36e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.subtitle {
-  color: #666;
-  margin-bottom: 30px;
+.hero h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.15;
+  max-width: 700px;
+  margin: 14px 0;
+  letter-spacing: -1.5px;
+}
+
+.hero p {
+  max-width: 620px;
+  color: #d6e0ed;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.edition-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #d6e0ed;
+  font-size: 13px;
+}
+
+.category-nav {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: 1120px;
+  margin: auto;
+  padding: 13px 24px;
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+}
+
+.category-nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.category-nav a:hover {
+  color: var(--blue);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 45px auto;
+  padding: 0 24px;
+}
+
+.section {
+  margin-bottom: 55px;
+  scroll-margin-top: 75px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: 23px;
+  color: var(--navy);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.section-line {
+  height: 2px;
+  flex: 1;
+  background: var(--border);
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .article {
-  background: white;
-  padding: 20px;
-  margin-bottom: 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.article h2 {
-  margin-top: 0;
-  font-size: 21px;
+.article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(20,36,58,0.08);
+}
+
+.category {
+  display: inline-block;
+  background: #edf3fa;
+  color: #315f91;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--navy);
+  margin: 0 0 13px;
+  letter-spacing: -0.3px;
 }
 
 .description {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 15px;
+  color: #586779;
+  line-height: 1.7;
 }
 
 .importance {
-  background: #f0f4f8;
-  padding: 12px;
-  margin-top: 15px;
-  border-radius: 6px;
+  background: #f5f7fa;
+  border-left: 3px solid var(--accent);
+  padding: 13px 15px;
+  margin-top: 18px;
+  border-radius: 0 7px 7px 0;
+  font-size: 14px;
+  color: #43536a;
+}
+
+.importance strong {
+  color: var(--navy);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.source {
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .read {
-  display: inline-block;
-  margin-top: 15px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
   text-decoration: none;
-  font-weight: bold;
+  white-space: nowrap;
+}
+
+.read:hover {
+  text-decoration: underline;
 }
 
 .footer {
-  color: #777;
+  background: var(--navy);
+  color: #c6d2e1;
+  padding: 35px 24px;
   text-align: center;
-  margin-top: 30px;
 }
+
+.footer-brand {
+  color: white;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.footer p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.footer-tagline {
+  color: #f3c36e;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 15px 18px;
+  }
+
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .hero {
+    padding: 40px 20px 45px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .container {
+    margin: 30px auto;
+    padding: 0 16px;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .article {
+    padding: 21px;
+  }
+
+  .article h3 {
+    font-size: 19px;
+  }
+
+  .section-heading h2 {
+    font-size: 20px;
+  }
+
+  .nav-inner {
+    padding: 13px 18px;
+    gap: 20px;
+  }
+
+  .edition-info {
+    gap: 10px;
+  }
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
+<header class="header">
+  <div class="header-inner">
 
-<h1>News for teenager</h1>
-
-<div class="subtitle">
-8 stories selected for you today
-</div>
-
-  <div class="article">
-
-    <h2>IIT Ropar-Incubated ASTRA Showcases Drone Technologies in New Delhi</h2>
-
-    <div class="description">
-      ASTRA Drones & Robotics Solutions, a start-up incubated at IIT Ropar, has showcased indigenous drone and robotics technology in New Delhi. Their innovations aim to advance India's self-reliance in drone tech, with applications ranging from agriculture to security.
+    <div>
+      <div class="brand">Teen<span>News</span></div>
+      <div class="tagline">Curiosity starts here</div>
     </div>
 
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      Seeing an Indian start-up innovate with drones is inspiring for tech-minded teenagers and shows how students and entrepreneurs can shape the future of technology in India.
+    <div class="header-label">
+      A world of ideas, discoveries and possibilities
     </div>
-
-    <a class="read"
-       href="https://idrw.org/iit-ropar-incubated-astra-showcases-drone-technologies-in-new-delhi/"
-       target="_blank">
-       Read the full story →
-    </a>
 
   </div>
-  
-  <div class="article">
+</header>
 
-    <h2>Indian Army to Use In-House Facility to Arm LCH Prachand Helicopters</h2>
+<section class="hero">
 
-    <div class="description">
-      The Indian Army will use its own in-house facility to arm its Light Combat Helicopters (LCH), called Prachand, boosting indigenous defence capabilities. This move supports India's push for self-reliance in military technology and strengthens defence preparedness.
+  <div class="hero-inner">
+
+    <div class="hero-label">Your daily news edition</div>
+
+    <h1>Stay curious.<br>Understand the world.</h1>
+
+    <p>
+      Interesting stories selected to keep you informed,
+      inspired and thinking beyond the classroom.
+    </p>
+
+    <div class="edition-info">
+      <span>0 stories</span>
+      <span>•</span>
+      <span>3 categories</span>
+      <span>•</span>
+      <span>Curated for curious minds</span>
     </div>
-
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      This highlights India's growing capability to produce advanced military technology at home—an exciting field for future engineers and innovators.
-    </div>
-
-    <a class="read"
-       href="https://idrw.org/indian-army-to-use-in-house-facility-to-arm-lch-prachand-helicopters/"
-       target="_blank">
-       Read the full story →
-    </a>
 
   </div>
-  
-  <div class="article">
 
-    <h2>Indians turn to start-ups to care for ageing parents as young become more mobile</h2>
+</section>
 
-    <div class="description">
-      As young Indians move away for work or studies, start-ups have emerged to help care for ageing parents back home. These companies provide services like healthcare management, daily assistance, and companionship for elders.
-    </div>
+<nav class="category-nav">
 
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      This story sheds light on changing family structures, responsibilities, and the innovative ways technology is addressing new social challenges—a relatable topic for teens considering their own futures.
-    </div>
-
-    <a class="read"
-       href="https://www.bbc.co.uk/news/articles/cmx2qr4rp1xeo?at_medium=RSS&at_campaign=rss"
-       target="_blank">
-       Read the full story →
-    </a>
-
+  <div class="nav-inner">
+    <a href="#india">INDIA & THE WORLD</a>
+    <a href="#technology">SCIENCE & TECHNOLOGY</a>
+    <a href="#people">PEOPLE & PLANET</a>
   </div>
-  
-  <div class="article">
 
-    <h2>India's largest share sale could end cheap mobile internet for millions</h2>
+</nav>
 
-    <div class="description">
-      Jio's upcoming IPO (Initial Public Offering) promises big profits for investors but might lead to higher costs for mobile data. If prices rise, millions of Indians could find mobile internet less affordable.
-    </div>
+<main class="container">
 
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      Since affordable mobile data fuels Indian education, entertainment, and connectivity for youth, any change in internet pricing directly affects teenagers' daily lives and opportunities.
-    </div>
 
-    <a class="read"
-       href="https://www.bbc.co.uk/news/articles/cw78pe7vlej5o?at_medium=RSS&at_campaign=rss"
-       target="_blank">
-       Read the full story →
-    </a>
 
+
+
+
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-brand">TeenNews</div>
+
+  <div class="footer-tagline">
+    Stay curious. Think bigger.
   </div>
-  
-  <div class="article">
 
-    <h2>A Day at IIT Bombay: How 1,200+ Students Are Fed Using Waste</h2>
+  <p>
+    Curated stories from .
+  </p>
 
-    <div class="description">
-      IIT Bombay is using leaf pellets made from garden waste as cooking fuel in its hostel mess, cutting LPG (gas) use by 60%. This eco-friendly innovation not only saves money and resources, but also reduces waste and carbon emissions.
-    </div>
+  <p>Made for curious young minds.</p>
 
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      This shows how creative solutions can make a real impact on sustainability and energy independence—an encouraging message for students interested in science, innovation, and environmental action.
-    </div>
-
-    <a class="read"
-       href="https://thebetterindia.com/videos/business/a-day-at-iit-bombay-how-1200-students-are-fed-using-waste-12772713"
-       target="_blank">
-       Read the full story →
-    </a>
-
-  </div>
-  
-  <div class="article">
-
-    <h2>Inspired by Her Brother, 16-YO Builds Gardens Where Bees Thrive & Autistic Children Can Explore</h2>
-
-    <div class="description">
-      Gunisha Kaur, a 16-year-old from Ludhiana, has created pollinator gardens that support bees and offer safe outdoor spaces for autistic children. Her project, 'Buzzing Blooms,' promotes biodiversity and inclusion in multiple cities.
-    </div>
-
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      An inspiring story about youth leadership, environmental stewardship, and inclusion, showing that teenagers can make a big difference in their communities.
-    </div>
-
-    <a class="read"
-       href="https://thebetterindia.com/changemakers/gunisha-kaur-pollinator-gardens-internation-eco-hero-award-ludhiana-india-12768795"
-       target="_blank">
-       Read the full story →
-    </a>
-
-  </div>
-  
-  <div class="article">
-
-    <h2>A Critically Endangered Pangolin on Shillong’s Doorstep: What Its Sighting Tells Us About Urban Forests</h2>
-
-    <div class="description">
-      A critically endangered Chinese pangolin was recently spotted near Shillong, Meghalaya. This rare sighting highlights the importance of urban forests in supporting biodiversity—even within city limits.
-    </div>
-
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      This story encourages awareness of wildlife conservation and how city environments can play a key role in protecting endangered species, fostering a sense of responsibility among youth.
-    </div>
-
-    <a class="read"
-       href="https://thebetterindia.com/wildlife/chinese-pangolin-spotted-near-shillong-urban-forests-12768901"
-       target="_blank">
-       Read the full story →
-    </a>
-
-  </div>
-  
-  <div class="article">
-
-    <h2>How an IAS Officer, Panchayats Revived a Dead River for 6,000+ Villagers Under Rs. 5 Crores</h2>
-
-    <div class="description">
-      With the leadership of an IAS officer and local panchayats, a once-dry river in Narsinghpur, Madhya Pradesh, has been revived, benefiting thousands of villagers. This project brought back festivals and community life along the riverbanks.
-    </div>
-
-    <div class="importance">
-      <strong>Why it matters:</strong><br>
-      This solution-oriented story shows the value of teamwork, civil service, and local action—motivating teenagers to believe in creating positive environmental change.
-    </div>
-
-    <a class="read"
-       href="https://thebetterindia.com/governance/singri-river-narsinghpur-panchayats-revival-12768977"
-       target="_blank">
-       Read the full story →
-    </a>
-
-  </div>
-  
-<div class="footer">
-Generated automatically from BBC news feeds
-</div>
-
-</div>
+</footer>
 
 </body>
 </html>
