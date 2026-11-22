@@ -195,7 +195,7 @@
       overflow: hidden;
       background: linear-gradient(130deg, var(--hero-start) 0%, var(--hero-end) 100%);
       color: #fff;
-      padding: 78px 6% 88px;
+      padding: 42px 6% 46px;
     }
 
     .hero::before {
@@ -211,6 +211,11 @@
       position: relative;
       max-width: 1180px;
       margin: auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px 40px;
+      flex-wrap: wrap;
     }
 
     .eyebrow {
@@ -222,7 +227,7 @@
       letter-spacing: 2.5px;
       font-size: 11.5px;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .eyebrow::before {
@@ -235,30 +240,35 @@
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(40px, 5.6vw, 62px);
+      font-size: clamp(27px, 3.4vw, 38px);
       font-weight: 700;
-      line-height: 1.06;
-      letter-spacing: -2px;
-      max-width: 720px;
-      margin-bottom: 20px;
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+      max-width: 640px;
+      margin-bottom: 8px;
     }
 
-    .hero h1 em {
-      font-style: normal;
+    .rotator {
+      display: inline-block;
       color: #ffb86b;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    .rotator.swap {
+      opacity: 0;
+      transform: translateY(8px);
     }
 
     .hero p {
       color: #d7d2ee;
       max-width: 560px;
-      font-size: 16.5px;
+      font-size: 15px;
     }
 
     .hero-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 30px;
     }
 
     .hero-chip {
@@ -600,11 +610,13 @@
       }
 
       .hero {
-        padding: 56px 6% 64px;
+        padding: 34px 6% 38px;
       }
 
-      .hero h1 {
-        letter-spacing: -1.2px;
+      .hero-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
       }
 
       .container {
@@ -653,22 +665,21 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">The Teen Edition</div>
-      <h1>Today's news,<br><em>minus the noise.</em></h1>
-      <p>
-        Important stories, explained simply.
-        Discover what's happening around you and why it matters.
-      </p>
+      <div class="hero-copy">
+        <div class="eyebrow">The Teen Edition</div>
+        <h1>Your daily briefing on <span id="rotator" class="rotator">India</span></h1>
+        <p>Important stories, explained simply — and why they matter to you.</p>
+      </div>
       <div class="hero-chips">
-        <span class="hero-chip"><span class="dot"></span>8 curated stories</span>
-        <span class="hero-chip"><span class="dot"></span>3 trusted sources</span>
+        <span class="hero-chip"><span class="dot"></span>8 stories</span>
+        <span class="hero-chip"><span class="dot"></span>3 sources</span>
         <span class="hero-chip"><span class="dot"></span>Monday, 23 November 2026</span>
       </div>
     </div>
   </section>
 
   <div class="ticker">
-    <div class="ticker-track"><span class="ticker-item">Is India rethinking its short-term military recruitment scheme?</span><span class="ticker-sep"></span><span class="ticker-item">DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</span><span class="ticker-sep"></span><span class="ticker-item">The AI start-ups fixing India&#039;s broken roads and messy land records</span><span class="ticker-sep"></span><span class="ticker-item">Was Delhi pollution data during Diwali misleading?</span><span class="ticker-sep"></span><span class="ticker-item">Thinking Balloon Tests Autonomous Aerostat in Bengaluru</span><span class="ticker-sep"></span><span class="ticker-item">300 Elephants, One Village, An Extraordinary Idea</span><span class="ticker-sep"></span><span class="ticker-item">College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</span><span class="ticker-sep"></span><span class="ticker-item">I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</span><span class="ticker-sep"></span><span class="ticker-item">Is India rethinking its short-term military recruitment scheme?</span><span class="ticker-sep"></span><span class="ticker-item">DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</span><span class="ticker-sep"></span><span class="ticker-item">The AI start-ups fixing India&#039;s broken roads and messy land records</span><span class="ticker-sep"></span><span class="ticker-item">Was Delhi pollution data during Diwali misleading?</span><span class="ticker-sep"></span><span class="ticker-item">Thinking Balloon Tests Autonomous Aerostat in Bengaluru</span><span class="ticker-sep"></span><span class="ticker-item">300 Elephants, One Village, An Extraordinary Idea</span><span class="ticker-sep"></span><span class="ticker-item">College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</span><span class="ticker-sep"></span><span class="ticker-item">I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</span><span class="ticker-sep"></span></div>
+    <div class="ticker-track"><span class="ticker-item">The AI start-ups fixing India&#039;s broken roads and messy land records</span><span class="ticker-sep"></span><span class="ticker-item">Is India rethinking its short-term military recruitment scheme?</span><span class="ticker-sep"></span><span class="ticker-item">Cumin-laced fizzy sodas are giving cola giants a tough fight in India</span><span class="ticker-sep"></span><span class="ticker-item">Thinking Balloon Tests Autonomous Aerostat in Bengaluru</span><span class="ticker-sep"></span><span class="ticker-item">DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</span><span class="ticker-sep"></span><span class="ticker-item">300 Elephants, One Village, An Extraordinary Idea</span><span class="ticker-sep"></span><span class="ticker-item">I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</span><span class="ticker-sep"></span><span class="ticker-item">College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</span><span class="ticker-sep"></span><span class="ticker-item">The AI start-ups fixing India&#039;s broken roads and messy land records</span><span class="ticker-sep"></span><span class="ticker-item">Is India rethinking its short-term military recruitment scheme?</span><span class="ticker-sep"></span><span class="ticker-item">Cumin-laced fizzy sodas are giving cola giants a tough fight in India</span><span class="ticker-sep"></span><span class="ticker-item">Thinking Balloon Tests Autonomous Aerostat in Bengaluru</span><span class="ticker-sep"></span><span class="ticker-item">DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</span><span class="ticker-sep"></span><span class="ticker-item">300 Elephants, One Village, An Extraordinary Idea</span><span class="ticker-sep"></span><span class="ticker-item">I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</span><span class="ticker-sep"></span><span class="ticker-item">College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</span><span class="ticker-sep"></span></div>
   </div>
 
   <main class="container">
@@ -680,7 +691,7 @@
           <p>The events shaping our world, explained simply.</p>
         </div>
         <span class="section-count">
-          2 stories
+          3 stories
         </span>
       </div>
 
@@ -696,16 +707,49 @@
         </span>
       </div>
 
-      <h3>Is India rethinking its short-term military recruitment scheme?</h3>
+      <h3>The AI start-ups fixing India&#039;s broken roads and messy land records</h3>
 
       <p class="description">
-        India has adjusted its military recruitment policy, allowing young soldiers a longer initial stint and giving them a better opportunity to transition into permanent service. This comes after criticism of the previous short-term policy that many felt was too restrictive for career development.
+        Dozens of Indian AI start-ups are coming up with creative tech solutions to everyday problems like pothole-ridden roads and disorganized land records, making daily life smoother and more efficient. These start-ups are also helping with improvements in legal-tech and healthcare for India.
       </p>
 
       
             <div class="why-matters">
               <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>For students considering a future in the armed forces, these changes could open new opportunities for stable careers and national service, while also impacting youth employment and defence readiness.</p>
+              <p>This story highlights how young innovators are using technology to solve common but frustrating problems in India, showing teenagers the power of creative thinking and how technology can genuinely change lives.</p>
+            </div>
+          
+
+      <a
+        class="read-link"
+        href="https://www.bbc.co.uk/news/articles/c820vnln2lzpo?at_medium=RSS&amp;at_campaign=rss"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read full story <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </article>
+  
+    <article class="article-card card-india">
+      <div class="card-top">
+        <span class="category-tag india">
+          <span class="dot"></span>India &amp; The World
+        </span>
+        <span class="source-name">
+          BBC
+        </span>
+      </div>
+
+      <h3>Is India rethinking its short-term military recruitment scheme?</h3>
+
+      <p class="description">
+        India is making its military recruitment scheme more attractive by giving young soldiers longer job tenures and another chance at permanent service. This shift is meant to improve the quality of recruits and reduce uncertainty for those serving.
+      </p>
+
+      
+            <div class="why-matters">
+              <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
+              <p>Military schemes like this shape the lives of many young Indians and may directly impact the future options for teenagers interested in defence careers, national service, or public service.</p>
             </div>
           
 
@@ -725,26 +769,26 @@
           <span class="dot"></span>India &amp; The World
         </span>
         <span class="source-name">
-          IDRW
+          BBC
         </span>
       </div>
 
-      <h3>DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</h3>
+      <h3>Cumin-laced fizzy sodas are giving cola giants a tough fight in India</h3>
 
       <p class="description">
-        DRDO’s Naval Science and Technological Laboratory (NSTL) is moving ahead with the development of carbon-fibre shells for torpedoes, aiming for lighter, stronger, and more efficient defence equipment. This marks significant progress in India&#039;s indigenous defence manufacturing.
+        Homegrown fizzy drinks with traditional Indian flavors like cumin are gaining popularity, taking on global soft drink giants in the Indian market. Consumers are shifting their preferences towards local and familiar tastes.
       </p>
 
       
             <div class="why-matters">
               <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>Teens interested in science and engineering can learn how materials science and research are critical for technological sovereignty and national security.</p>
+              <p>This story reflects changing consumer trends and how Indian businesses are successfully introducing new products that connect with cultural identity, inspiring teenagers to consider innovation rooted in their heritage.</p>
             </div>
           
 
       <a
         class="read-link"
-        href="https://idrw.org/nstl-composite-shell-4-tender-drdo-torpedo/"
+        href="https://www.bbc.co.uk/news/articles/cw1m4ym7ez2eo?at_medium=RSS&amp;at_campaign=rss"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -774,26 +818,26 @@
           <span class="dot"></span>Science &amp; Tech
         </span>
         <span class="source-name">
-          BBC
+          IDRW
         </span>
       </div>
 
-      <h3>The AI start-ups fixing India&#039;s broken roads and messy land records</h3>
+      <h3>Thinking Balloon Tests Autonomous Aerostat in Bengaluru</h3>
 
       <p class="description">
-        Indian AI start-ups are tackling unique problems, such as repairing roads more efficiently and digitizing confusing land records, by using technology tailored to India&#039;s specific needs. Their innovative solutions range from legal-tech to healthcare, helping to solve everyday challenges that impact millions.
+        A Bengaluru-based start-up, Thinking Balloon, has successfully tested an autonomous tethered balloon for surveillance and communication. This innovative technology can rise, monitor areas, and relay information, promising a new way for surveillance and disaster management.
       </p>
 
       
             <div class="why-matters">
               <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>This story shows how young innovators in India are transforming real-world problems with technology, offering inspiration for students interested in tech, entrepreneurship, and making a difference.</p>
+              <p>This shows the exciting potential of Indian startups in defence tech, encouraging teenagers to think about careers and innovation in science, technology, and national security.</p>
             </div>
           
 
       <a
         class="read-link"
-        href="https://www.bbc.co.uk/news/articles/c820vnln2lzpo?at_medium=RSS&amp;at_campaign=rss"
+        href="https://idrw.org/thinking-balloon-autonomous-aerostat-defence-surveillance/"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -811,7 +855,7 @@
           <p>Stories about people, communities and our planet.</p>
         </div>
         <span class="section-count">
-          5 stories
+          4 stories
         </span>
       </div>
 
@@ -823,59 +867,26 @@
           <span class="dot"></span>People &amp; Planet
         </span>
         <span class="source-name">
-          BBC
-        </span>
-      </div>
-
-      <h3>Was Delhi pollution data during Diwali misleading?</h3>
-
-      <p class="description">
-        A BBC analysis suggests official pollution data during Diwali in Delhi might have been skewed due to missing information, making air quality appear better than it really was. This raises questions about the reliability of pollution tracking and its effect on public health policy.
-      </p>
-
-      
-            <div class="why-matters">
-              <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>Understanding how public data is collected and verified is key for teens concerned about environmental and health issues. It also highlights the importance of transparency and science in tackling air pollution.</p>
-            </div>
-          
-
-      <a
-        class="read-link"
-        href="https://www.bbc.co.uk/news/articles/c30rkwpxdx50o?at_medium=RSS&amp;at_campaign=rss"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Read full story <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </article>
-  
-    <article class="article-card card-planet">
-      <div class="card-top">
-        <span class="category-tag planet">
-          <span class="dot"></span>People &amp; Planet
-        </span>
-        <span class="source-name">
           IDRW
         </span>
       </div>
 
-      <h3>Thinking Balloon Tests Autonomous Aerostat in Bengaluru</h3>
+      <h3>DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</h3>
 
       <p class="description">
-        A Bengaluru-based startup, Thinking Balloon, has successfully tested an autonomous tethered balloon system for surveillance. This new technology can be used for defence, disaster management, and even environmental monitoring.
+        India’s Defence Research and Development Organisation (DRDO) is advancing the use of lightweight carbon-fibre shells for torpedoes, which could improve underwater weaponry. This move highlights indigenous research in strengthening the country’s defence manufacturing.
       </p>
 
       
             <div class="why-matters">
               <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>This shows how Indian startups are driving innovation in aerospace technology, offering teens insight into potential careers and advancements that are shaping the country’s future security and tech landscape.</p>
+              <p>Defence technology advances like this not only make India safer but also open up career paths in science, engineering, and research for young people interested in cutting-edge innovation.</p>
             </div>
           
 
       <a
         class="read-link"
-        href="https://idrw.org/thinking-balloon-autonomous-aerostat-defence-surveillance/"
+        href="https://idrw.org/nstl-composite-shell-4-tender-drdo-torpedo/"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -896,13 +907,13 @@
       <h3>300 Elephants, One Village, An Extraordinary Idea</h3>
 
       <p class="description">
-        In Assam’s Hatikhuli village, locals once clashed with elephants passing through their crops. Now, thanks to creative conservation efforts led by the community, more than 300 elephants safely migrate through the area each year, showing how humans and wildlife can coexist.
+        In Assam’s Hatikhuli village, people and elephants once clashed—but villagers, led by conservationists, found ways for both to coexist by planting food for elephants and creating safe migration corridors. Now, over 300 elephants pass through safely every year, proving that communities can find solutions for people-wildlife conflict.
       </p>
 
       
             <div class="why-matters">
               <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>This inspiring story demonstrates the power of community action, environmental awareness, and peaceful coexistence with nature—key ideas for responsible young citizens.</p>
+              <p>This inspiring story of peaceful coexistence between humans and wildlife can motivate teenagers to think creatively about solving environmental problems and shows the impact one community can make.</p>
             </div>
           
 
@@ -926,22 +937,22 @@
         </span>
       </div>
 
-      <h3>College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</h3>
+      <h3>I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</h3>
 
       <p class="description">
-        A student team in Uttarakhand designed an innovative way to enhance a mountain spring, doubling the village’s drinking water supply. Their solution benefits families and tackles a recurring problem of seasonal water scarcity.
+        Students at a Tamil Nadu school transformed discarded newspapers into moisture-resistant waste bags, winning an Earthshot Prize category and a grant to further their invention. Their project offers a sustainable alternative to polythene and helps with waste management.
       </p>
 
       
             <div class="why-matters">
               <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>This story underlines how student-led science and teamwork can solve important real-life challenges, encouraging teens to use their skills for positive social and environmental impact.</p>
+              <p>This story shows how teenagers&#039; creativity and teamwork can lead to practical, eco-friendly solutions and even international recognition—an inspiration for students interested in innovation and sustainability.</p>
             </div>
           
 
       <a
         class="read-link"
-        href="https://thebetterindia.com/conservation/nature/iit-roorkee-new-spring-doubles-drinking-water-uttarakhand-village-12827613"
+        href="https://thebetterindia.com/changemakers/tamil-nadu-school-students-decom-possible-childrens-earthshot-prize-12826578"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -959,22 +970,22 @@
         </span>
       </div>
 
-      <h3>I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</h3>
+      <h3>College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</h3>
 
       <p class="description">
-        Students from a Tamil Nadu school developed an eco-friendly alternative to plastic by creating waste-resistant bags from old newspapers, jute, and crayons. Their innovation earned them a prize at the global I CAN Earthshot Challenge.
+        A college team designed and implemented a new spring system in Uttarakhand&#039;s Unchaun village, drastically improving access to drinking water during dry months. Their work is helping local families overcome severe seasonal water shortages.
       </p>
 
       
             <div class="why-matters">
               <span class="wm-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z"/></svg> Why it matters</span>
-              <p>It’s a great example of young people solving environmental problems creatively, proving that students can have a real-world impact—and even be recognized globally for it.</p>
+              <p>This is a real-world example of student-led innovation solving critical problems in rural India, inspiring teenagers to think about how their skills can help society and the environment.</p>
             </div>
           
 
       <a
         class="read-link"
-        href="https://thebetterindia.com/changemakers/tamil-nadu-school-students-decom-possible-childrens-earthshot-prize-12826578"
+        href="https://thebetterindia.com/conservation/nature/iit-roorkee-new-spring-doubles-drinking-water-uttarakhand-village-12827613"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -1000,6 +1011,21 @@
       root.setAttribute("data-theme", next);
       localStorage.setItem("tn-theme", next);
     });
+
+    (function () {
+      var words = ["India", "science & tech", "space", "the planet", "big ideas", "sport"];
+      var el = document.getElementById("rotator");
+      if (!el) return;
+      var i = 0;
+      setInterval(function () {
+        el.classList.add("swap");
+        setTimeout(function () {
+          i = (i + 1) % words.length;
+          el.textContent = words[i];
+          el.classList.remove("swap");
+        }, 260);
+      }, 2600);
+    })();
   </script>
 
 </body>
