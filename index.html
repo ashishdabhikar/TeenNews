@@ -41,8 +41,6 @@
       --planet: #1e8f5c;
       --planet-bg: #e4f5ec;
       --link: #4a46d6;
-      --hero-start: #1c1145;
-      --hero-end: #5b3fd4;
       --header-bg: rgba(246, 244, 239, 0.82);
     }
 
@@ -60,8 +58,6 @@
       --planet: #5ed69d;
       --planet-bg: rgba(30, 143, 92, 0.18);
       --link: #a5a0ff;
-      --hero-start: #120b33;
-      --hero-end: #4a2fb8;
       --header-bg: rgba(14, 16, 20, 0.8);
     }
 
@@ -188,110 +184,6 @@
     html[data-theme="dark"] .theme-toggle .moon { display: block; }
     html[data-theme="dark"] .theme-toggle .sun { display: none; }
 
-    /* ---------- HERO ---------- */
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(130deg, var(--hero-start) 0%, var(--hero-end) 100%);
-      color: #fff;
-      padding: 42px 6% 46px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.2px, transparent 1.3px);
-      background-size: 26px 26px;
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      position: relative;
-      max-width: 1180px;
-      margin: auto;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px 40px;
-      flex-wrap: wrap;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #ffb86b;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-size: 11.5px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 26px;
-      height: 2px;
-      background: #ffb86b;
-      border-radius: 2px;
-    }
-
-    .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(27px, 3.4vw, 38px);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -1.2px;
-      max-width: 640px;
-      margin-bottom: 8px;
-    }
-
-    .rotator {
-      display: inline-block;
-      color: #ffb86b;
-      transition: opacity 0.25s, transform 0.25s;
-    }
-
-    .rotator.swap {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-
-    .hero p {
-      color: #d7d2ee;
-      max-width: 560px;
-      font-size: 15px;
-    }
-
-    .hero-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .hero-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(4px);
-      color: #f0edff;
-      font-size: 12.5px;
-      font-weight: 600;
-      padding: 8px 15px;
-      border-radius: 999px;
-    }
-
-    .hero-chip .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #ffb86b;
-    }
-
     /* ---------- TICKER ---------- */
 
     .ticker {
@@ -344,7 +236,7 @@
     .container {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 52px 6% 72px;
+      padding: 34px 6% 72px;
     }
 
     .news-section {
@@ -609,18 +501,8 @@
         display: none;
       }
 
-      .hero {
-        padding: 34px 6% 38px;
-      }
-
-      .hero-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 18px;
-      }
-
       .container {
-        padding: 38px 6% 56px;
+        padding: 26px 6% 56px;
       }
 
       .article-grid {
@@ -662,21 +544,6 @@
       </div>
     </div>
   </header>
-
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="eyebrow">The Teen Edition</div>
-        <h1>Your daily briefing on <span id="rotator" class="rotator">India</span></h1>
-        <p>Important stories, explained simply — and why they matter to you.</p>
-      </div>
-      <div class="hero-chips">
-        <span class="hero-chip"><span class="dot"></span>8 stories</span>
-        <span class="hero-chip"><span class="dot"></span>3 sources</span>
-        <span class="hero-chip"><span class="dot"></span>Monday, 23 November 2026</span>
-      </div>
-    </div>
-  </section>
 
   <div class="ticker">
     <div class="ticker-track"><span class="ticker-item">The AI start-ups fixing India&#039;s broken roads and messy land records</span><span class="ticker-sep"></span><span class="ticker-item">Is India rethinking its short-term military recruitment scheme?</span><span class="ticker-sep"></span><span class="ticker-item">Cumin-laced fizzy sodas are giving cola giants a tough fight in India</span><span class="ticker-sep"></span><span class="ticker-item">Thinking Balloon Tests Autonomous Aerostat in Bengaluru</span><span class="ticker-sep"></span><span class="ticker-item">DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</span><span class="ticker-sep"></span><span class="ticker-item">300 Elephants, One Village, An Extraordinary Idea</span><span class="ticker-sep"></span><span class="ticker-item">I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</span><span class="ticker-sep"></span><span class="ticker-item">College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</span><span class="ticker-sep"></span><span class="ticker-item">The AI start-ups fixing India&#039;s broken roads and messy land records</span><span class="ticker-sep"></span><span class="ticker-item">Is India rethinking its short-term military recruitment scheme?</span><span class="ticker-sep"></span><span class="ticker-item">Cumin-laced fizzy sodas are giving cola giants a tough fight in India</span><span class="ticker-sep"></span><span class="ticker-item">Thinking Balloon Tests Autonomous Aerostat in Bengaluru</span><span class="ticker-sep"></span><span class="ticker-item">DRDO’s NSTL Advances Carbon-Fibre Torpedo Shell Development</span><span class="ticker-sep"></span><span class="ticker-item">300 Elephants, One Village, An Extraordinary Idea</span><span class="ticker-sep"></span><span class="ticker-item">I CAN Earthshot Challenge | How TN Students Turned Old Newspapers Into Waste Bags and Won $2,000</span><span class="ticker-sep"></span><span class="ticker-item">College Team Creates a Whole New Spring to Double Drinking Water Supply in an Uttarakhand Village</span><span class="ticker-sep"></span></div>
@@ -1011,21 +878,6 @@
       root.setAttribute("data-theme", next);
       localStorage.setItem("tn-theme", next);
     });
-
-    (function () {
-      var words = ["India", "science & tech", "space", "the planet", "big ideas", "sport"];
-      var el = document.getElementById("rotator");
-      if (!el) return;
-      var i = 0;
-      setInterval(function () {
-        el.classList.add("swap");
-        setTimeout(function () {
-          i = (i + 1) % words.length;
-          el.textContent = words[i];
-          el.classList.remove("swap");
-        }, 260);
-      }, 2600);
-    })();
   </script>
 
 </body>
