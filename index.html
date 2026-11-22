@@ -354,6 +354,30 @@
       max-width: 720px;
     }
 
+    .card-img {
+      margin: -26px -26px 18px;
+      height: 170px;
+      overflow: hidden;
+      background: var(--surface-2);
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .article-card:hover .card-img img {
+      transform: scale(1.04);
+    }
+
+    .article-card.featured .card-img {
+      margin: -36px -36px 22px;
+      height: 300px;
+    }
+
     .card-top {
       display: flex;
       justify-content: space-between;
@@ -514,6 +538,16 @@
         padding: 22px;
       }
 
+      .card-img {
+        margin: -22px -22px 16px;
+        height: 160px;
+      }
+
+      .article-card.featured .card-img {
+        margin: -22px -22px 16px;
+        height: 200px;
+      }
+
       .section-heading h2 {
         font-size: 23px;
       }
@@ -565,6 +599,8 @@
       <div class="article-grid">
         
     <article class="article-card card-india featured">
+      
+
       <div class="card-top">
         <span class="category-tag india">
           <span class="dot"></span>India &amp; The World
@@ -598,6 +634,8 @@
     </article>
   
     <article class="article-card card-india">
+      
+
       <div class="card-top">
         <span class="category-tag india">
           <span class="dot"></span>India &amp; The World
@@ -631,6 +669,8 @@
     </article>
   
     <article class="article-card card-india">
+      
+
       <div class="card-top">
         <span class="category-tag india">
           <span class="dot"></span>India &amp; The World
@@ -680,6 +720,8 @@
       <div class="article-grid">
         
     <article class="article-card card-technology featured">
+      
+
       <div class="card-top">
         <span class="category-tag technology">
           <span class="dot"></span>Science &amp; Tech
@@ -729,6 +771,8 @@
       <div class="article-grid">
         
     <article class="article-card card-planet featured">
+      
+
       <div class="card-top">
         <span class="category-tag planet">
           <span class="dot"></span>People &amp; Planet
@@ -762,6 +806,12 @@
     </article>
   
     <article class="article-card card-planet">
+      
+            <div class="card-img">
+              <img src="https://img-cdn.publive.online/fit-in/1280x960/english-betterindia/media/youtube_thumbnails/vi/-Ex-uzcQb2k/sddefault.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()">
+            </div>
+          
+
       <div class="card-top">
         <span class="category-tag planet">
           <span class="dot"></span>People &amp; Planet
@@ -795,6 +845,12 @@
     </article>
   
     <article class="article-card card-planet">
+      
+            <div class="card-img">
+              <img src="https://img-cdn.publive.online/fit-in/1280x960/english-betterindia/media/media_files/2026/11/20/feature-11-2026-11-20-16-14-06.png" alt="" loading="lazy" onerror="this.parentNode.remove()">
+            </div>
+          
+
       <div class="card-top">
         <span class="category-tag planet">
           <span class="dot"></span>People &amp; Planet
@@ -828,6 +884,12 @@
     </article>
   
     <article class="article-card card-planet">
+      
+            <div class="card-img">
+              <img src="https://img-cdn.publive.online/fit-in/1280x960/english-betterindia/media/media_files/2026/11/20/feature-8-2026-11-20-22-27-56.png" alt="" loading="lazy" onerror="this.parentNode.remove()">
+            </div>
+          
+
       <div class="card-top">
         <span class="category-tag planet">
           <span class="dot"></span>People &amp; Planet
